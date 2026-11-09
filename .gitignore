@@ -1,0 +1,32 @@
+# Python environments and generated files
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage*
+htmlcov/
+
+# Local settings and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Model weights, downloads, caches, and temporary output
+*.pkl
+*.joblib
+*.pt
+*.pth
+*.safetensors
+.cache/
+.cache-huggingface/
+huggingface/
+transformers/
+.ipynb_checkpoints/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db

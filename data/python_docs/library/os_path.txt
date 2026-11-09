@@ -1,0 +1,20 @@
+Пути и файлы: os.path и pathlib
+
+Путь указывает, где программа ищет данные. Относительный путь зависит от текущего рабочего каталога; абсолютный путь начинается от корня файловой системы. Для переносимого проекта не следует вставлять в код путь к личной папке разработчика.
+
+Модуль os.path умеет соединять части пути и проверять существование файла. Объект Path из pathlib даёт похожие операции через методы и оператор /.
+
+import os
+from pathlib import Path
+
+relative_name = os.path.join("data", "ml_docs", "classification.txt")
+print(os.path.exists(relative_name))
+corpus = Path("data")
+for document in sorted(corpus.rglob("*.txt")):
+    print(document.relative_to(corpus), document.stat().st_size)
+
+Если запуск возможен из разных каталогов, опирайтесь на расположение файла модуля:
+project_root = Path(__file__).resolve().parents[2]
+corpus_dir = project_root / "data"
+
+Для чтения текста явно задавайте кодировку: `document.read_text(encoding="utf-8")`. Для записи есть `write_text`; она заменяет содержимое, поэтому перед её вызовом стоит проверить путь. Переменные окружения читают через `os.getenv("OLLAMA_URL")`: это настройка процесса, а не файл `.env`, который Python загружает сам.
