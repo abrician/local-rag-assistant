@@ -1,0 +1,54 @@
+[
+  {
+    "query": "переобучение регуляризация dropout",
+    "expected_filename": "overfitting.txt"
+  },
+  {
+    "query": "недообучение bias variance tradeoff",
+    "expected_filename": "underfitting.txt"
+  },
+  {
+    "query": "классификация accuracy precision recall",
+    "expected_filename": "classification.txt"
+  },
+  {
+    "query": "регрессия MAE MSE R2",
+    "expected_filename": "regression.txt"
+  },
+  {
+    "query": "train test split кросс-валидация",
+    "expected_filename": "train_test_split.txt"
+  },
+  {
+    "query": "нейронная сеть backpropagation adam",
+    "expected_filename": "neural_networks.txt"
+  },
+  {
+    "query": "эмбеддинги sentence transformers cosine",
+    "expected_filename": "embeddings.txt"
+  },
+  {
+    "query": "функции python lambda аргументы",
+    "expected_filename": "functions.txt"
+  },
+  {
+    "query": "список словарь tuple set python",
+    "expected_filename": "data_structures.txt"
+  },
+  {
+    "query": "классы наследование init python",
+    "expected_filename": "classes.txt"
+  },
+  {
+    "query": "модель запоминает вместо обобщения",
+    "expected_filename": "overfitting.txt"
+  },
+  {
+    "query": "как разделить данные на train и test",
+    "expected_filename": "train_test_split.txt"
+  },
+  {
+    "query": "числовое представление текста вектор",
+    "expected_filename": "embeddings.txt"
+  }
+]

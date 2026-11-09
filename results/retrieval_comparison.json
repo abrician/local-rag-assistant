@@ -1,0 +1,532 @@
+{
+  "evaluation": "Original 13 course queries, ranked by unique source document",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.5.4",
+    "scikit-learn": "1.9.1",
+    "sentence-transformers": "5.7.0",
+    "torch": "2.15.0+cpu"
+  },
+  "models": [
+    {
+      "model": "tfidf",
+      "document_count": 14,
+      "chunk_count": 14,
+      "queries": 13,
+      "correct_at_1": 11,
+      "correct_at_3": 13,
+      "raw_chunk_correct_at_3": 13,
+      "hit_at_1": 0.8461538461538461,
+      "hit_at_3": 1.0,
+      "index_build_seconds": 0.0121,
+      "model_load_seconds": 0.0,
+      "query_total_seconds": 0.0076,
+      "query_mean_seconds": 0.0006,
+      "cases": [
+        {
+          "query": "переобучение регуляризация dropout",
+          "expected_source": "ml_docs/overfitting.txt",
+          "top_3_sources": [
+            "ml_docs/overfitting.txt",
+            "ml_docs/underfitting.txt",
+            "ml_docs/embeddings.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "недообучение bias variance tradeoff",
+          "expected_source": "ml_docs/underfitting.txt",
+          "top_3_sources": [
+            "ml_docs/underfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "классификация accuracy precision recall",
+          "expected_source": "ml_docs/classification.txt",
+          "top_3_sources": [
+            "ml_docs/classification.txt",
+            "ml_docs/regression.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "регрессия MAE MSE R2",
+          "expected_source": "ml_docs/regression.txt",
+          "top_3_sources": [
+            "ml_docs/regression.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "train test split кросс-валидация",
+          "expected_source": "ml_docs/train_test_split.txt",
+          "top_3_sources": [
+            "ml_docs/train_test_split.txt",
+            "ml_docs/regression.txt",
+            "python_docs/library/string_methods.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "нейронная сеть backpropagation adam",
+          "expected_source": "ml_docs/neural_networks.txt",
+          "top_3_sources": [
+            "ml_docs/neural_networks.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "эмбеддинги sentence transformers cosine",
+          "expected_source": "ml_docs/embeddings.txt",
+          "top_3_sources": [
+            "ml_docs/embeddings.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "функции python lambda аргументы",
+          "expected_source": "python_docs/tutorial/functions.txt",
+          "top_3_sources": [
+            "python_docs/tutorial/functions.txt",
+            "python_docs/tutorial/introduction.txt",
+            "ml_docs/neural_networks.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "список словарь tuple set python",
+          "expected_source": "python_docs/reference/data_structures.txt",
+          "top_3_sources": [
+            "python_docs/reference/data_structures.txt",
+            "python_docs/tutorial/introduction.txt",
+            "python_docs/library/string_methods.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "классы наследование init python",
+          "expected_source": "python_docs/reference/classes.txt",
+          "top_3_sources": [
+            "python_docs/reference/classes.txt",
+            "python_docs/tutorial/introduction.txt",
+            "python_docs/library/string_methods.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "модель запоминает вместо обобщения",
+          "expected_source": "ml_docs/overfitting.txt",
+          "top_3_sources": [
+            "ml_docs/regression.txt",
+            "ml_docs/underfitting.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "как разделить данные на train и test",
+          "expected_source": "ml_docs/train_test_split.txt",
+          "top_3_sources": [
+            "ml_docs/regression.txt",
+            "ml_docs/train_test_split.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "числовое представление текста вектор",
+          "expected_source": "ml_docs/embeddings.txt",
+          "top_3_sources": [
+            "ml_docs/embeddings.txt",
+            "python_docs/tutorial/introduction.txt",
+            "python_docs/library/os_path.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        }
+      ]
+    },
+    {
+      "model": "sentence-transformers/all-MiniLM-L6-v2",
+      "document_count": 14,
+      "chunk_count": 75,
+      "queries": 13,
+      "correct_at_1": 10,
+      "correct_at_3": 11,
+      "raw_chunk_correct_at_3": 10,
+      "hit_at_1": 0.7692307692307693,
+      "hit_at_3": 0.8461538461538461,
+      "index_build_seconds": 3.1942,
+      "model_load_seconds": 2.4674,
+      "query_total_seconds": 0.2331,
+      "query_mean_seconds": 0.0179,
+      "cases": [
+        {
+          "query": "переобучение регуляризация dropout",
+          "expected_source": "ml_docs/overfitting.txt",
+          "top_3_sources": [
+            "ml_docs/overfitting.txt",
+            "ml_docs/underfitting.txt",
+            "python_docs/library/string_methods.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "недообучение bias variance tradeoff",
+          "expected_source": "ml_docs/underfitting.txt",
+          "top_3_sources": [
+            "ml_docs/underfitting.txt",
+            "ml_docs/overfitting.txt",
+            "ml_docs/train_test_split.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "классификация accuracy precision recall",
+          "expected_source": "ml_docs/classification.txt",
+          "top_3_sources": [
+            "ml_docs/classification.txt",
+            "ml_docs/regression.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "регрессия MAE MSE R2",
+          "expected_source": "ml_docs/regression.txt",
+          "top_3_sources": [
+            "ml_docs/regression.txt",
+            "python_docs/tutorial/introduction.txt",
+            "ml_docs/neural_networks.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "train test split кросс-валидация",
+          "expected_source": "ml_docs/train_test_split.txt",
+          "top_3_sources": [
+            "ml_docs/train_test_split.txt",
+            "ml_docs/underfitting.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "нейронная сеть backpropagation adam",
+          "expected_source": "ml_docs/neural_networks.txt",
+          "top_3_sources": [
+            "ml_docs/neural_networks.txt",
+            "ml_docs/underfitting.txt",
+            "ml_docs/train_test_split.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "эмбеддинги sentence transformers cosine",
+          "expected_source": "ml_docs/embeddings.txt",
+          "top_3_sources": [
+            "ml_docs/embeddings.txt",
+            "python_docs/library/string_methods.txt",
+            "python_docs/tutorial/control_flow.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "функции python lambda аргументы",
+          "expected_source": "python_docs/tutorial/functions.txt",
+          "top_3_sources": [
+            "python_docs/tutorial/introduction.txt",
+            "ml_docs/neural_networks.txt",
+            "python_docs/tutorial/functions.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": false
+        },
+        {
+          "query": "список словарь tuple set python",
+          "expected_source": "python_docs/reference/data_structures.txt",
+          "top_3_sources": [
+            "python_docs/reference/data_structures.txt",
+            "python_docs/tutorial/introduction.txt",
+            "python_docs/library/os_path.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "классы наследование init python",
+          "expected_source": "python_docs/reference/classes.txt",
+          "top_3_sources": [
+            "python_docs/tutorial/introduction.txt",
+            "ml_docs/neural_networks.txt",
+            "python_docs/library/os_path.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": false,
+          "raw_chunk_hit_at_3": false
+        },
+        {
+          "query": "модель запоминает вместо обобщения",
+          "expected_source": "ml_docs/overfitting.txt",
+          "top_3_sources": [
+            "ml_docs/overfitting.txt",
+            "python_docs/tutorial/control_flow.txt",
+            "ml_docs/classification.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "как разделить данные на train и test",
+          "expected_source": "ml_docs/train_test_split.txt",
+          "top_3_sources": [
+            "ml_docs/train_test_split.txt",
+            "ml_docs/overfitting.txt",
+            "ml_docs/underfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "числовое представление текста вектор",
+          "expected_source": "ml_docs/embeddings.txt",
+          "top_3_sources": [
+            "ml_docs/neural_networks.txt",
+            "python_docs/tutorial/control_flow.txt",
+            "ml_docs/underfitting.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": false,
+          "raw_chunk_hit_at_3": false
+        }
+      ],
+      "model_max_seq_length": 256,
+      "longest_chunk_tokens": 195,
+      "over_limit_chunks": 0,
+      "token_chunk_size": 192,
+      "token_overlap": 32
+    },
+    {
+      "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "document_count": 14,
+      "chunk_count": 48,
+      "queries": 13,
+      "correct_at_1": 10,
+      "correct_at_3": 13,
+      "raw_chunk_correct_at_3": 13,
+      "hit_at_1": 0.7692307692307693,
+      "hit_at_3": 1.0,
+      "index_build_seconds": 2.6171,
+      "model_load_seconds": 2.5081,
+      "query_total_seconds": 0.3729,
+      "query_mean_seconds": 0.0287,
+      "cases": [
+        {
+          "query": "переобучение регуляризация dropout",
+          "expected_source": "ml_docs/overfitting.txt",
+          "top_3_sources": [
+            "ml_docs/overfitting.txt",
+            "ml_docs/underfitting.txt",
+            "ml_docs/train_test_split.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "недообучение bias variance tradeoff",
+          "expected_source": "ml_docs/underfitting.txt",
+          "top_3_sources": [
+            "ml_docs/underfitting.txt",
+            "ml_docs/overfitting.txt",
+            "ml_docs/train_test_split.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "классификация accuracy precision recall",
+          "expected_source": "ml_docs/classification.txt",
+          "top_3_sources": [
+            "ml_docs/classification.txt",
+            "ml_docs/overfitting.txt",
+            "ml_docs/underfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "регрессия MAE MSE R2",
+          "expected_source": "ml_docs/regression.txt",
+          "top_3_sources": [
+            "ml_docs/regression.txt",
+            "ml_docs/classification.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "train test split кросс-валидация",
+          "expected_source": "ml_docs/train_test_split.txt",
+          "top_3_sources": [
+            "ml_docs/train_test_split.txt",
+            "ml_docs/underfitting.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "нейронная сеть backpropagation adam",
+          "expected_source": "ml_docs/neural_networks.txt",
+          "top_3_sources": [
+            "ml_docs/neural_networks.txt",
+            "ml_docs/underfitting.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "эмбеддинги sentence transformers cosine",
+          "expected_source": "ml_docs/embeddings.txt",
+          "top_3_sources": [
+            "ml_docs/embeddings.txt",
+            "ml_docs/neural_networks.txt",
+            "ml_docs/classification.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "функции python lambda аргументы",
+          "expected_source": "python_docs/tutorial/functions.txt",
+          "top_3_sources": [
+            "python_docs/tutorial/introduction.txt",
+            "python_docs/tutorial/functions.txt",
+            "python_docs/tutorial/control_flow.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "список словарь tuple set python",
+          "expected_source": "python_docs/reference/data_structures.txt",
+          "top_3_sources": [
+            "python_docs/reference/data_structures.txt",
+            "python_docs/tutorial/introduction.txt",
+            "python_docs/tutorial/control_flow.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "классы наследование init python",
+          "expected_source": "python_docs/reference/classes.txt",
+          "top_3_sources": [
+            "python_docs/tutorial/introduction.txt",
+            "python_docs/reference/classes.txt",
+            "python_docs/tutorial/control_flow.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "модель запоминает вместо обобщения",
+          "expected_source": "ml_docs/overfitting.txt",
+          "top_3_sources": [
+            "ml_docs/underfitting.txt",
+            "ml_docs/overfitting.txt",
+            "ml_docs/neural_networks.txt"
+          ],
+          "hit_at_1": false,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "как разделить данные на train и test",
+          "expected_source": "ml_docs/train_test_split.txt",
+          "top_3_sources": [
+            "ml_docs/train_test_split.txt",
+            "ml_docs/regression.txt",
+            "ml_docs/overfitting.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        },
+        {
+          "query": "числовое представление текста вектор",
+          "expected_source": "ml_docs/embeddings.txt",
+          "top_3_sources": [
+            "ml_docs/embeddings.txt",
+            "python_docs/tutorial/functions.txt",
+            "python_docs/tutorial/introduction.txt"
+          ],
+          "hit_at_1": true,
+          "hit_at_3": true,
+          "raw_chunk_hit_at_3": true
+        }
+      ],
+      "model_max_seq_length": 128,
+      "longest_chunk_tokens": 128,
+      "over_limit_chunks": 0,
+      "token_chunk_size": 126,
+      "token_overlap": 21
+    }
+  ]
+}
